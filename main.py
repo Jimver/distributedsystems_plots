@@ -144,5 +144,5 @@ def plot_percentile_multiple(name, percentiles_map, percentages):
 # plot_percentile("Put operation", put_perc, p)
 
 
-plot_percentile_multiple("Get operation", get_perc_map, p)
-plot_percentile_multiple("Put operation", put_perc_map, p)
+plot_percentile_multiple("Get_operation", get_perc_map, p)
+plot_percentile_multiple("Put_operation", put_perc_map, p)
