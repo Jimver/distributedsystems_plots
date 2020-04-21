@@ -17,8 +17,8 @@ put_latency_1 = cluster_put_latency_n_1_1
 get_latency_3 = cluster_get_latency_n_3_3
 put_latency_3 = cluster_put_latency_n_3_3
 
-get_latency_6 = cluster_get_latency_n_6_2
-put_latency_6 = cluster_put_latency_n_6_2
+get_latency_6 = cluster_get_latency_n_6_3
+put_latency_6 = cluster_put_latency_n_6_3
 
 get_sorted = np.sort(get_latency)
 put_sorted = np.sort(put_latency)
