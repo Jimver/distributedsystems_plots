@@ -8,8 +8,8 @@ from cluster7 import *
 
 plt.rcParams.update({'font.size': 30})
 
-put_latency = cluster_put_latency_n_1_1
-get_latency = cluster_get_latency_n_1_1
+put_latency = cluster_put_latency_n_3_3
+get_latency = cluster_get_latency_n_3_3
 
 get_latency_1 = cluster_get_latency_n_1_1
 put_latency_1 = cluster_put_latency_n_1_1
@@ -82,6 +82,9 @@ def plot_percentile(name, percentiles, percentages):
 
     ax.plot([100.0 - v for v in x], y, label='N=1')
 
+    for label in ax.get_yticklabels():
+        label.set_fontsize(16)
+
     ax.grid(True, linewidth=0.5, zorder=5)
     ax.grid(True, which='minor', linewidth=0.5, linestyle=':')
 
@@ -89,7 +92,7 @@ def plot_percentile(name, percentiles, percentages):
     ax.set_xlabel('Percentile', fontsize=18)
     ax.set_title(name + ' latency distribution', fontsize=22)
 
-    ax.legend()
+    ax.legend(fontsize=22)
 
     sns.despine(fig=fig)
 
@@ -126,6 +129,9 @@ def plot_percentile_multiple(name, percentiles_map, percentages):
     for key in percentiles_map:
         ax.plot([100.0 - v for v in x], percentiles_map[key], label="N={}".format(key))
 
+    for label in ax.get_yticklabels():
+        label.set_fontsize(16)
+
     ax.grid(True, linewidth=0.5, zorder=5)
     ax.grid(True, which='minor', linewidth=0.5, linestyle=':')
 
@@ -133,7 +139,7 @@ def plot_percentile_multiple(name, percentiles_map, percentages):
     ax.set_xlabel('Percentile', fontsize=18)
     ax.set_title(name + ' latency distribution', fontsize=22)
 
-    ax.legend()
+    ax.legend(fontsize=18)
 
     sns.despine(fig=fig)
 
